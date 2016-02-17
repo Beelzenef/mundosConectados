@@ -121,7 +121,7 @@ namespace AppF_GestionHumana
         /// </summary>
         public int Buscar(int eligeID)
         {
-            // Variable temporal para comparar contenido de lista de ciduadanos
+            // Variable temporal para comparar contenido de lista de ciudadanos
             int tmp = 0;
 
             // Si la lista está vacía...
@@ -218,57 +218,30 @@ namespace AppF_GestionHumana
     /// Estructura para personas, con información de nombres, apeplidos, fechas de nacimiento, sueldo y código
     /// único generado de forma aleatoria.
     /// </summary>
-    public struct Persona
+    public class Persona
     {
-        // Campos para personas
-
-        int _codigo;
-        string _apellido1;
-        string _apellido2;
-        string _nombre;
-        string _fechaNacimiento;
 
         // Propiedades
 
-        public int Codigo
-        {
-            get { return _codigo; }
-            set { _codigo = value; }
-        }
+        public int Codigo { get; set; }
 
-        public string Fecha
-        {
-            get { return _fechaNacimiento; }
-            set { _fechaNacimiento = value; }
-        }
+        public string Fecha { get; set; }
 
-        public string Nombre
-        {
-            get { return _nombre; }
-            set { _nombre = value; }
-        }
+        public string Nombre { get; set; }
 
-        public string Apellido1
-        {
-            get { return _apellido1; }
-            set { _apellido1 = value; }
-        }
+        public string Apellido1 { get; set; }
 
-        public string Apellido2
-        {
-            get { return _apellido2; }
-            set { _apellido2 = value; }
-        }
+        public string Apellido2 { get; set; }
 
+        // Constructor
 
         public Persona(int id, string nombre, string fecha, string apellido1, string apellido2)
         {
-            _codigo = id;
-            _nombre = nombre;
-            _apellido1 = apellido1;
-            _apellido2 = apellido2;
-            _fechaNacimiento = fecha;
-
+            Codigo = id;
+            Nombre = nombre;
+            Fecha = fecha;
+            Apellido1 = apellido1;
+            Apellido2 = apellido2;
         }
 
         /// ... ToString() sobreescrito
@@ -278,10 +251,7 @@ namespace AppF_GestionHumana
         /// <returns>Cadena de texto con datos ordenados de Personas</returns>
         public override string ToString()
         {
-            return "código " + _codigo.ToString().PadRight(4, ' ') +
-               "; nombre " + _nombre.PadRight(10, ' ') +
-               "; fecha " + _fechaNacimiento.PadRight(5, ' ');
-
+            return Codigo + ";" + Nombre + ";" + Apellido1 + ";" + Apellido2 + ";" + Fecha;
         }
 
     }
