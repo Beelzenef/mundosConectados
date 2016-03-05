@@ -33,6 +33,21 @@ namespace AppF_GestionHumana
             }
         }
 
+        public Persona this[int i]
+        {
+            get
+            {
+                return _listaCiudadanos[i];
+            }
+            set
+            {
+                _listaCiudadanos[i] = value;
+            }
+        }
+
+        // Propiedad Count
+        public int Cantidad { get; set; }
+
         // Métodos
 
         /// ... AnadirCiudadano()
