@@ -41,5 +41,18 @@ namespace AppF_GestionHumana
         // Nivel de legislación
         // Nivel de tecnología
 
+        static Random rnd = new Random();
+        public static string GenerarNombreAlea(int longitudN)
+        {
+            string nombreGenerado = string.Empty;
+            for (int i = 0; i <= longitudN; i++)
+            {
+                if (i == 0)
+                    nombreGenerado += (char)rnd.Next(65, 91);
+                nombreGenerado += (char)rnd.Next(97, 123);
+            }
+            return nombreGenerado;
+        }
+
     }
 }
