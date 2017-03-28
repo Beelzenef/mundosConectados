@@ -1,1 +1,3 @@
-Una mejora sustancial que no puedes evitar incorporar a tu codigo
+Una mejora sustancial que no puedes evitar incorporar a tu codigo.
+
+Nueva mejora.
